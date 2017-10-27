@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.shixing.a5combineyouku.ViewGroupA
+        android:id="@+id/rl_level1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/level1"
+        >
+        <ImageButton
+            android:id="@+id/ib_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_home"
+            android:background="@null"
+            />
+    </com.shixing.a5combineyouku.ViewGroupA>
+
+    <com.shixing.a5combineyouku.ViewGroupB
+        android:id="@+id/rl_level2"
+        android:layout_width="180dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/level2"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_search"
+            android:background="@null"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="3dp"
+            />
+        <ImageButton
+            android:id="@+id/ib_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_menu"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:background="@null"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_myyouku"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="3dp"
+            />
+    </com.shixing.a5combineyouku.ViewGroupB>
+
+
+
+
+    <!--ViewGroup C-->
+    <com.shixing.a5combineyouku.ViewGroupC
+        android:id="@+id/rl_level3"
+        android:layout_width="280dp"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/level3"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/channel1"
+            android:background="@null"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="3dp"
+            />
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/channel4"
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="60dp"
+            android:background="@null"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/channel5"
+            android:background="@null"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="60dp"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/channel2"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/channel6"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="60dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/channel7"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="22dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/channel3"
+            android:background="@null"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="3dp"/>
+    </com.shixing.a5combineyouku.ViewGroupC>
+</RelativeLayout>

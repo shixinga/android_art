@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:haha="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+    <one.com.v1view.MyTopBar
+        android:id="@+id/myTopbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        haha:leftBackground="#ff0000"
+        haha:leftText="左边帅哥"
+        haha:leftTextColor="#000000"
+        haha:rightText="右侧"
+        haha:rightTextColor="#00ff00"
+        haha:rightBackground="#00a0a0"
+        haha:titleText="标题定天下"
+        haha:titleColor="#0000ff"
+        haha:titleTextSize="8sp">
+
+    </one.com.v1view.MyTopBar>
+</RelativeLayout>

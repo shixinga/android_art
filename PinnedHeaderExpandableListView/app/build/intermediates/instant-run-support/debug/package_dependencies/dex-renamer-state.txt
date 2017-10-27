@@ -1,0 +1,4 @@
+#Thu Sep 14 11:33:43 CST 2017
+base.0=C\:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-v4-19.1.0_d7bf3e78a1393e8ea4510ccf2f220b32e0b281a4
+renamed.0=classes.dex
+file.0=C\:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-v4-19.1.0_d7bf3e78a1393e8ea4510ccf2f220b32e0b281a4\\classes.dex

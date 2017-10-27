@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="one.com.v1view.MainActivity">
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:onClick="measureViewOnClick"
+          android:text="measureViewOnClick"/>
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:onClick="topBarOnClick"
+          android:text="topBarOnClick"/>
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:onClick="myTextviewOnClick"
+          android:text="myTextviewOnClick"/>
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:onClick="shineTextviewOnClick"
+          android:text="shineTextviewOnClick"/>
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:onClick="circleProcessOnClick"
+          android:text="circleProcessOnClick"/>
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:onClick="volumeViewOnClick"
+          android:text="volumeViewOnClick"/>
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:onClick="myScrollviewOnClick"
+          android:text="myScrollviewOnClick"/>
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="dispatchViewOnClick"
+          android:onClick="dispatchViewOnClick"/>
+</LinearLayout>
