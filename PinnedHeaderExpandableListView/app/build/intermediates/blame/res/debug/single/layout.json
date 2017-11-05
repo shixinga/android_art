@@ -8,7 +8,19 @@
         "source": "C:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\layout\\group.xml"
     },
     {
+        "merged": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
         "merged": "C:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\child.xml",
         "source": "C:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\layout\\child.xml"
+    },
+    {
+        "merged": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\child.xml",
+        "source": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\layout\\child.xml"
+    },
+    {
+        "merged": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\group.xml",
+        "source": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\layout\\group.xml"
     }
 ]

@@ -1,7 +1,4 @@
-#Thu Sep 14 11:33:44 CST 2017
-base.0=C\:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_ef1f860ea8ff03d3a3d92a0d5eb1850c9f2012a5
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d579c127a477193f3d72f1916f7fb9050261c84a\\classes.dex
-base.1=C\:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d579c127a477193f3d72f1916f7fb9050261c84a
-file.0=C\:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_ef1f860ea8ff03d3a3d92a0d5eb1850c9f2012a5\\classes.dex
+#Sat Nov 04 22:08:22 CST 2017
+base.0=D\:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=D\:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

@@ -4,6 +4,22 @@
         "source": "C:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\expanded.png",
+        "source": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\drawable-hdpi\\expanded.png"
+    },
+    {
+        "merged": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\collapse.png",
+        "source": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\drawable-hdpi\\collapse.png"
+    },
+    {
+        "merged": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_search.png",
+        "source": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\drawable-hdpi\\ic_action_search.png"
+    },
+    {
         "merged": "C:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_search.png",
         "source": "C:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\drawable-hdpi\\ic_action_search.png"
     },

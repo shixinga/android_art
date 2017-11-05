@@ -1,5 +1,17 @@
 [
     {
+        "merged": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_group.xml",
+        "source": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\drawable\\selector_group.xml"
+    },
+    {
+        "merged": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\child_bg.xml",
+        "source": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\drawable\\child_bg.xml"
+    },
+    {
+        "merged": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_item.xml",
+        "source": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\drawable\\selector_item.xml"
+    },
+    {
         "merged": "C:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\child_bg.xml",
         "source": "C:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\drawable\\child_bg.xml"
     },

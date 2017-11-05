@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
+        "source": "D:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
         "source": "C:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
     }

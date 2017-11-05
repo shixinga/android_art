@@ -1,4 +1,4 @@
-#Thu Sep 14 11:33:44 CST 2017
-base.0=C\:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_8
+#Sat Nov 04 21:41:38 CST 2017
+base.0=D\:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_8
 renamed.0=classes.dex
-file.0=C\:\\workspace\\ryg_as\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_8\\classes.dex
+file.0=D\:\\github\\android_art\\PinnedHeaderExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_8\\classes.dex

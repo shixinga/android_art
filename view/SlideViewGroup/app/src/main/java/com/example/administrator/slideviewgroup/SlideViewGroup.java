@@ -1,6 +1,7 @@
 package com.example.administrator.slideviewgroup;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -56,9 +57,9 @@ public class SlideViewGroup extends ViewGroup {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         initView();
-//        Log.d(MainActivity.TAG, "onMeasure: " + getChildCount());
-        Log.d(MainActivity.TAG, "onMeasure: mLl_left_menu.getLayoutParams().width"
-                + mLl_left_menu.getLayoutParams().width + " getMeasuredHeight()=" + mLl_left_menu.getMeasuredHeight());
+        Log.d(MainActivity.TAG, "onMeasure: " + getChildCount());
+//        Log.d(MainActivity.TAG, "onMeasure: mLl_left_menu.getLayoutParams().width"
+//                + mLl_left_menu.getLayoutParams().width + " getMeasuredHeight()=" + mLl_left_menu.getMeasuredHeight());
         mLl_left_menu.measure(mLl_left_menu.getLayoutParams().width,heightMeasureSpec);
 
         mLl_main_content.measure(widthMeasureSpec,heightMeasureSpec);
@@ -76,9 +77,11 @@ public class SlideViewGroup extends ViewGroup {
     }
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        Log.d(MainActivity.TAG, "onLayout: ");
         mLl_left_menu.layout(-mLl_left_menu.getLayoutParams().width,0,0,mMeasuredHeight);
         mLl_main_content.layout(0,0,mWidthMainContent,mMeasuredHeight);
     }
+
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
@@ -109,7 +112,7 @@ public class SlideViewGroup extends ViewGroup {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.d(MainActivity.TAG, "onTouchEvent: " + getScrollX());
+//        Log.d(MainActivity.TAG, "onTouchEvent: " + getScrollX());
         int currentX = (int) event.getX();
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
