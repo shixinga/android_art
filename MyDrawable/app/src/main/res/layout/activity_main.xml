@@ -93,5 +93,92 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_selector"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/iv_level_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/level_list_drawable"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setLevelClick"
+                android:text="setImageViewLevel"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text=""
+                android:gravity="center"
+                android:background="@drawable/shape_drawable_gradient_linear"
+                />
+
+            <TextView
+                android:text=""
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:background="@drawable/shap_drawable_gradient_radius"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text=""
+                android:background="@drawable/shape_drawable_gradient_sweep"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_transition"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text=""
+                android:background="@drawable/transition_drawable"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/inset_drawable"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/tv_scale"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text=""
+                android:gravity="center"
+                android:background="@drawable/scale_drawable"
+                />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
