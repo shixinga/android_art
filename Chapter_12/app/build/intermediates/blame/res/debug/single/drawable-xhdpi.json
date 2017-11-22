@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\github\\android_art\\Chapter_12\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\image_default.png",
+        "source": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\drawable-xhdpi\\image_default.png"
+    },
+    {
+        "merged": "D:\\github\\android_art\\Chapter_12\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher_1.png",
+        "source": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher_1.png"
+    }
+]

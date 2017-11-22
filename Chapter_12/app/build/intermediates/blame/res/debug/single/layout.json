@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\github\\android_art\\Chapter_12\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\github\\android_art\\Chapter_12\\app\\build\\intermediates\\res\\merged\\debug\\layout\\image_list_item.xml",
+        "source": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\layout\\image_list_item.xml"
+    }
+]

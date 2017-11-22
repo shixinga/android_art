@@ -1,5 +1,7 @@
 package com.example.csx.mydrawable;
 
+import android.graphics.Color;
+import android.graphics.drawable.ClipDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.ScaleDrawable;
 import android.graphics.drawable.TransitionDrawable;
@@ -41,6 +43,16 @@ public class MainActivity extends AppCompatActivity {
         TextView tvScaleDrawable = (TextView) findViewById(R.id.tv_scale);
         ((ScaleDrawable)tvScaleDrawable.getBackground()).setLevel(10);
 
+        //ClipDrawable 的level被设置的是被裁减的宽高
+        ImageView ivClip = (ImageView) findViewById(R.id.iv_clip);
+        ((ClipDrawable)ivClip.getDrawable()).setLevel(8000);     //对应于android:src="@drawable/clip_drawable"
+//        ((ClipDrawable)ivClip.getBackground()).setLevel(8000);  //对应于android:background="@drawable/clip_drawable"
+
+
+        //customer drawable 的设置
+        TextView tvCustomerDrawable = (TextView) findViewById(R.id.tv_customer_drawable);
+        CustomerDrawable customerDrawable = new CustomerDrawable(Color.parseColor("#0ac39e"));
+        tvCustomerDrawable.setBackgroundDrawable(customerDrawable);
     }
 
     public void click(View view) {

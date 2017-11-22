@@ -180,5 +180,33 @@
                 android:background="@drawable/scale_drawable"
                 />
         </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--<ImageView
+                android:id="@+id/iv_clip"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/clip_drawable"
+                />-->
+            <ImageView
+                android:id="@+id/iv_clip"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/clip_drawable"
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/tv_customer_drawable"
+                android:text="customer drawable!"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

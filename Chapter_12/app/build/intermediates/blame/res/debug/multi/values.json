@@ -1,0 +1,226 @@
+[
+    {
+        "outputFile": "D:\\github\\android_art\\Chapter_12\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 45,
+                    "endOffset": 96
+                },
+                "from": {
+                    "file": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 109,
+                        "endColumn": 45,
+                        "endOffset": 150
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 101,
+                    "endColumn": 48,
+                    "endOffset": 145
+                },
+                "from": {
+                    "file": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 48,
+                        "endOffset": 103
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 254,
+                    "endColumn": 44,
+                    "endOffset": 294
+                },
+                "from": {
+                    "file": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\values\\ids.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 44,
+                        "endOffset": 99
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 299,
+                    "endColumn": 47,
+                    "endOffset": 342
+                },
+                "from": {
+                    "file": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 47,
+                        "endOffset": 102
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 347,
+                    "endColumn": 52,
+                    "endOffset": 395
+                },
+                "from": {
+                    "file": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 108,
+                        "endColumn": 52,
+                        "endOffset": 156
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 400,
+                    "endColumn": 60,
+                    "endOffset": 456
+                },
+                "from": {
+                    "file": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 162,
+                        "endColumn": 60,
+                        "endOffset": 218
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 461,
+                    "endLine": 15,
+                    "endColumn": 12,
+                    "endOffset": 747
+                },
+                "from": {
+                    "file": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 196,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 486
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 752,
+                    "endLine": 18,
+                    "endColumn": 12,
+                    "endOffset": 907
+                },
+                "from": {
+                    "file": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 527,
+                        "endLine": 22,
+                        "endColumn": 12,
+                        "endOffset": 684
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 912,
+                    "endLine": 23,
+                    "endColumn": 12,
+                    "endOffset": 1122
+                },
+                "from": {
+                    "file": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 727,
+                        "endLine": 29,
+                        "endColumn": 12,
+                        "endOffset": 941
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1127,
+                    "endLine": 29,
+                    "endColumn": 12,
+                    "endOffset": 1402
+                },
+                "from": {
+                    "file": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 949,
+                        "endLine": 36,
+                        "endColumn": 12,
+                        "endOffset": 1229
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1407,
+                    "endLine": 33,
+                    "endColumn": 12,
+                    "endOffset": 1569
+                },
+                "from": {
+                    "file": "D:\\github\\android_art\\Chapter_12\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 1237,
+                        "endLine": 41,
+                        "endColumn": 12,
+                        "endOffset": 1402
+                    }
+                }
+            }
+        ]
+    }
+]
