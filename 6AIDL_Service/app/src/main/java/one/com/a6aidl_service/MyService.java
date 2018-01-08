@@ -71,14 +71,14 @@ public class MyService extends Service {
         @Override
         public void registerListener(IOnNewBookReceiveListener listener) throws RemoteException {
             mListenerList.register(listener);
-            Log.d(TAG, "registerListener:"+ "..currentThread:" + Thread.currentThread().getName());
+            Log.d(TAG, "registerListener:"+ "..currentThread:" + Thread.currentThread().getName() + " " + listener.asBinder());
         }
 
         //binder线程池中的线程调用，而不是ui线程调用，因为这是被客户端进程调用的方法
         @Override
         public void unRegisterListener(IOnNewBookReceiveListener listener) throws RemoteException {
             mListenerList.unregister(listener);
-            Log.d(TAG, "unregisterListener:  "+ "..currentThread:" + Thread.currentThread().getName());
+            Log.d(TAG, "unregisterListener:  "+ "..currentThread:" + Thread.currentThread().getName() + " " + listener.asBinder());
 
         }
     };
