@@ -114,13 +114,14 @@ public class MyService extends Service {
                     e.printStackTrace();
                 }
                 Book book = new Book("cc" + count++);
-                Log.d(TAG, "ReceiveBook run:  "+ "..currentThread:" + Thread.currentThread().getName());
+//                Log.d(TAG, "ReceiveBook run:  "+ "..currentThread:" + Thread.currentThread().getName());
                 final int N = mListenerList.beginBroadcast();
                 for (int i = 0; i < N; ++i) {
                     IOnNewBookReceiveListener listener = mListenerList.getBroadcastItem(i);
                     if (listener != null) {
                         try {
                             listener.onNewBookReceive(book);
+                            Log.d(TAG, "run: " + listener);
                         } catch (RemoteException e) {
                             e.printStackTrace();
                         }

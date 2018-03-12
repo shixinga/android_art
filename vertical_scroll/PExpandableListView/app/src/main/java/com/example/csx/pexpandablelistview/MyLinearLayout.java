@@ -15,11 +15,11 @@ import android.widget.ListView;
  */
 
 public class MyLinearLayout extends LinearLayout {
-    private static final String TAG = "MyLinearLayout";
+       private static final String TAG = "MyLinearLayout";
 
     LinearLayout mLlHeader;
     ImageView mIv;
-//    ListView mLv;
+    //    ListView mLv;
     MyExpandableListView myExpandableListView;
     int mHeaderMeasuredHeight;
     int mOriginalMeasuredHeight;

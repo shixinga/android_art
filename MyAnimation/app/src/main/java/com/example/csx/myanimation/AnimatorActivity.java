@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 
 /**
@@ -29,10 +31,25 @@ public class AnimatorActivity extends Activity {
         setContentView(R.layout.activity_animator);
     }
 
+    /**
+     * view在animator后view的translationX或translationY会变,
+     * 而view在animtion后view的translationX或translationY不会变
+     * @param view
+     */
     public void iCanMoveClick(View view) {
+
+        Log.d(TAG, "iCanMoveClick: " + view.getTranslationY());
         Button bt = (Button) view;
         ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(bt, "translationY", 0, bt.getHeight());
         objectAnimator.start();
+    }
+    public void iCanMoveClickAnimation(View view) {
+        Log.d(TAG, "iCanMoveClickAnimation: " + view.getTranslationY());
+        Button bt = (Button) view;
+        TranslateAnimation translateAnimation = new TranslateAnimation(0,0,0,bt.getHeight());
+        translateAnimation.setDuration(600);
+        translateAnimation.setFillAfter(true);
+        view.startAnimation(translateAnimation);
     }
 
     //内存泄漏,解决方法：在onDestroy()设置cancel()

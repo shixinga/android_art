@@ -9,10 +9,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="iCanMoveClick"
-        android:text="iCanMoveClick"
+        android:text="iCanMoveClick animator"
+        />
+    <Button
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="iCanMoveClickAnimation"
+        android:text="iCanMoveClick Animation"
         />
 
     <Button
+        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="colorChangingClick"

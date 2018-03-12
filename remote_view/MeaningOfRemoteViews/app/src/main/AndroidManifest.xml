@@ -17,8 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FirstActivity" />
-        <activity android:name=".SecondActivity" />
+        <activity android:name=".FirstActivity"  android:process=":remote"/>
+        <activity android:name=".SecondActivity" android:process=":re2"/>
     </application>
 
 </manifest>

@@ -76,13 +76,13 @@ public class RefreshListView extends ListView implements AbsListView.OnScrollLis
         mTv_header_title = (TextView) mHeadView.findViewById(R.id.tv_header_title);
         mTv_header_desc = (TextView) mHeadView.findViewById(R.id.tv_header_desc);
 
-        int height = mHeadView.getHeight();
-//        int measureHeight = mHeadView.getMeasuredHeight();
+        int height = mHeadView.getHeight(); //0
+//        int measureHeight = mHeadView.getMeasuredHeight(); //0
 //        Log.d(MainActivity.TAG, "initHeadView: height=" + height + " measuredHeight=" + measureHeight);
         mHeadView.measure(0,0); //按照mHeadView的布局去测量并得出测量结果的宽高
         height = mHeadView.getHeight();
         mHeaderViewHeight = mHeadView.getMeasuredHeight();
-//        Log.d(MainActivity.TAG, "initHeadView:after measure() height=" + height + " measuredHeight=" + mHeaderViewHeight);
+//        Log.d(MainActivity.TAG, "initHeadView:after measure() height=" + height + " measuredHeight=" + mHeaderViewHeight); //0 和110
         mHeadView.setPadding(0,-mHeaderViewHeight,0,0);
         addHeaderView(mHeadView);
     }

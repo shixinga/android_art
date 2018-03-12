@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.ib_home:
                 Log.d(TAG, "onClick: ");
                 //布局动画
-                int delay = 0;
+/*                int delay = 0;
                 if (mIsLevel2Display) {
                     //if 第3级菜单有显示，先让其转出，延迟200毫秒后第2级菜单再移出
                     if (mIsLevel3Display) {
@@ -62,32 +62,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     AnimationUtil.animationOut(mRl_level2,delay);
                 } else {
                     AnimationUtil.animationIn(mRl_level2);
-                }
-/*
+                }*/
 //              属性动画
                 if (mIsLevel2Display) {
                     AnimatorUtil.animatorOut(mRl_level2);
                 } else {
                     AnimatorUtil.animatorIn(mRl_level2);
                 }
-*/
 
                 mIsLevel2Display = !mIsLevel2Display;
                 break;
             case R.id.ib_menu :
                 Log.d(TAG, "onClick: menu");
-                if (mIsLevel3Display) {
+               /* if (mIsLevel3Display) {
                     AnimationUtil.animationOut(mRl_level3,0);
                 } else {
                     AnimationUtil.animationIn(mRl_level3);
-                }
+                }*/
 
                 //属性动画
-               /* if (mIsLevel3Display) {
+                if (mIsLevel3Display) {
                     AnimatorUtil.animatorOut(mRl_level3);
                 } else {
                     AnimatorUtil.animatorIn(mRl_level3);
-                }*/
+                }
                 mIsLevel3Display = !mIsLevel3Display;
                 break;
             default:
