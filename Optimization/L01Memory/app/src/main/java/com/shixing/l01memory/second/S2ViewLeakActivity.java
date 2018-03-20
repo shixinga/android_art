@@ -8,7 +8,7 @@ import android.support.annotation.Nullable;
  * Created by shixing on 2018/3/11.
  */
 
-public class SecondActivity extends Activity {
+public class S2ViewLeakActivity extends Activity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

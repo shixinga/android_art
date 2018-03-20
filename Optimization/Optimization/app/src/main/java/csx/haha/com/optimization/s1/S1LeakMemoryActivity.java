@@ -1,24 +1,28 @@
-package com.shixing.l01memory;
+package csx.haha.com.optimization.s1;
 
 import android.app.Activity;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.shixing.l01memory.utils.CommonUtil;
-
 import java.lang.ref.WeakReference;
-import java.util.Timer;
-import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity {
+import csx.haha.com.optimization.R;
+import csx.haha.com.optimization.utils.CommonUtil;
+
+/**
+ * Created by sunray on 2018-3-12.
+ */
+
+public class S1LeakMemoryActivity extends Activity {
+
     private static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_s1_leakmemory);
         //当横竖屏切换时，MainActivity会重新创建
         //所以这里导致旧的MainActivity.this对象泄漏
         //所以能用Application的Context就用Application的，不要用MainActivity.this
@@ -71,30 +75,30 @@ public class MainActivity extends AppCompatActivity {
     //mHandler也是内部类实例的引用，会引用外部对象MainActivity.this。
     //如果Handler在Activity退出时，它可能还活着，就会持有Activity的引用，从而导致内存泄漏
 
-   /* private Handler mHandler = new Handler() {
+    /* private Handler mHandler = new Handler() {
+         @Override
+         public void handleMessage(Message msg) {
+             super.handleMessage(msg);
+         }
+     };*/
+    //上面handler的解决方法:
+    private static class MyHandler extends Handler {
+        private WeakReference<S1LeakMemoryActivity> mWeakReference;
+
+        public MyHandler(S1LeakMemoryActivity activity) {
+            //弱引用，当内存一发生gc的时候就会回收
+            this.mWeakReference = new WeakReference<S1LeakMemoryActivity>(activity);
+        }
+
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
+            S1LeakMemoryActivity tempActivity = mWeakReference.get();
+            if (tempActivity == null || tempActivity.isFinishing()) {
+                return ;
+            }
+            //访问MainActivity.this.a
+            tempActivity.a = 3;
         }
-    };*/
-    //上面handler的解决方法:
-    private static class MyHandler extends Handler {
-       private WeakReference<MainActivity> mWeakReference;
-
-       public MyHandler(MainActivity activity) {
-           //弱引用，当内存一发生gc的时候就会回收
-           this.mWeakReference = new WeakReference<MainActivity>(activity);
-       }
-
-       @Override
-       public void handleMessage(Message msg) {
-           super.handleMessage(msg);
-           MainActivity tempActivity = mWeakReference.get();
-           if (tempActivity == null || tempActivity.isFinishing()) {
-               return ;
-           }
-           //访问MainActivity.this.a
-           tempActivity.a = 3;
-       }
-   }
+    }
 }

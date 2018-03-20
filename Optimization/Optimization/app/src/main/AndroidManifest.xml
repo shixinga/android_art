@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="csx.haha.com.optimization">
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".s1.S1Activity" />
+        <activity android:name=".s1.S1LeakMemoryActivity" />
+        <activity android:name=".s1.S1MemoryChurnActivity" />
+        <activity android:name=".s2.S2ChatumLatinumActivity" />
+        <activity android:name=".s2.S2Activity" />
+        <activity android:name=".s2.S2ChatumLatinumActivityOptimization" />
+        <activity android:name=".s2.S2DroidCardsActivity" />
+        <activity android:name=".s2.S2DroidCardsActivityOptimization" />
+        <activity android:name=".s3.S3Activity" />
+        <activity android:name=".s3.S3WaitLockActivity" />
+        <activity android:name=".s3.S3AlarmManagerActivity" />
+        <activity android:name=".s3.S3JobServiceActivity" />
+
+        <receiver android:name=".s3.S3MyBroadcast">
+            <intent-filter>
+                <action android:name="nihaoa"/>
+            </intent-filter>
+        </receiver>
+        <service android:name=".s3.MyJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+    </application>
+
+</manifest>
