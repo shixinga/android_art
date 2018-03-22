@@ -22,4 +22,10 @@
         android:onClick="click3"
         android:text="电量优化"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click4"
+        android:text="bitmap优化"
+        />
 </LinearLayout>

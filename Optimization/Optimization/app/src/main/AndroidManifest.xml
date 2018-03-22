@@ -4,7 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -31,6 +33,8 @@
         <activity android:name=".s3.S3WaitLockActivity" />
         <activity android:name=".s3.S3AlarmManagerActivity" />
         <activity android:name=".s3.S3JobServiceActivity" />
+        <activity android:name=".s4.S4BitmapActivity" />
+        <activity android:name=".s4.S4Activity" />
 
         <receiver android:name=".s3.S3MyBroadcast">
             <intent-filter>
