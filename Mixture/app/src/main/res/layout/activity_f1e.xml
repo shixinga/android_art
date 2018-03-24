@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shixing.mixture.view.RevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:text="E"
+        />
+
+    <Button
+        android:id="@+id/singleTop_d_frome"
+        android:text="打开D"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+</com.shixing.mixture.view.RevealLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shixing.mixture.view.RevealLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/bt_f4_flexlistview"
+        android:text="flexlistview"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+    <Button
+        android:id="@+id/bt_f4_refresh_listview"
+        android:text="refresh listview"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+</com.shixing.mixture.view.RevealLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shixing.mixture.view.RevealLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.shixing.mixture.view.SelfView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="#000000"
+        />
+    <!-- padding要在onDraw()里面实现-->
+    <com.shixing.mixture.view.SelfView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="#000000"
+        />
+    <com.shixing.mixture.view.SelfView2Padding
+        android:layout_marginTop="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="#000000"
+        />
+    <com.shixing.mixture.view.SelfView2PaddingWrapContent
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="#000000"
+        />
+</com.shixing.mixture.view.RevealLayout>

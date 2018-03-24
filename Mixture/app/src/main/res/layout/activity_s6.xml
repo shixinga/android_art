@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- bitmap drawable-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:text=""
+                android:gravity="center"
+                android:background="@drawable/bitmap_drawable"
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:text=""
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bitmap_drawable_mirror"
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:text=""
+                android:background="@drawable/bitmap_drawable_clamp"
+                />
+
+        </LinearLayout>
+
+        <!-- shape drawable-->
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text=""
+                android:gravity="center"
+                android:background="@drawable/shape_drawable"
+                />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="6dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text=""
+                android:gravity="center"
+                android:background="@drawable/shape_drawable_stroke"
+                />
+
+            <TextView
+                android:id="@+id/tv_shape_drawable_padding_size"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/shape_drawable_size_padding"
+                android:text="hi nihao!"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layer_drawable"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="6dp"
+            android:text="stateListDrawable"
+            android:onClick="click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/iv_level_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/level_list_drawable"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setLevelClick"
+                android:text="setImageViewLevel"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text=""
+                android:gravity="center"
+                android:background="@drawable/shape_drawable_gradient_linear"
+                />
+
+            <TextView
+                android:text=""
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:background="@drawable/shap_drawable_gradient_radius"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text=""
+                android:background="@drawable/shape_drawable_gradient_sweep"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_transition"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text=""
+                android:background="@drawable/transition_drawable"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/inset_drawable"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/tv_scale"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text=""
+                android:gravity="center"
+                android:background="@drawable/scale_drawable"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--<ImageView
+                android:id="@+id/iv_clip"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/clip_drawable"
+                />-->
+            <ImageView
+                android:id="@+id/iv_clip"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/clip_drawable"
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/tv_customer_drawable"
+                android:text="customer drawable!"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

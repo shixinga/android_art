@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shixing.mixture.view.RevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/bt_t3_diff"
+        android:text="不同方向"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+    <Button
+        android:id="@+id/bt_t3_same"
+        android:text="相同方向"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+</com.shixing.mixture.view.RevealLayout>

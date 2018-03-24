@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shixing.mixture.view.RevealLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/bt_f4_selfview"
+        android:text="自定义view"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+    <Button
+        android:id="@+id/bt_f4_combineview_animator"
+        android:text="组合view Animator"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+    <Button
+        android:text="组合view Animation"
+        android:id="@+id/bt_f4_combineview_animation"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+    <Button
+        android:text="viewgroup之slidemenu"
+        android:id="@+id/bt_f4_slidemenu"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+    <Button
+        android:text="listview"
+        android:id="@+id/bt_f4_listview"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+</com.shixing.mixture.view.RevealLayout>

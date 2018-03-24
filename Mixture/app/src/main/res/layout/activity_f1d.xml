@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shixing.mixture.view.RevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:text="D"
+        />
+
+    <Button
+        android:id="@+id/standardA_fromd"
+        android:text="打开A"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+    <Button
+        android:id="@+id/standardE_fromd"
+        android:text="打开E"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+    <Button
+        android:id="@+id/singleTask_fromd"
+        android:text="打开自身"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+</com.shixing.mixture.view.RevealLayout>

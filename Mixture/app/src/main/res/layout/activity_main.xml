@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <com.shixing.mixture.view.RevealLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/first"
+            android:text="1 Activity LaunchMode"
+            android:layout_marginTop="10dp"
+            style="@style/AppTheme.Button.Highlight"
+            android:onClick="click"
+            />
+        <Button
+            android:id="@+id/second"
+            android:text="2 IPC"
+            android:layout_marginTop="10dp"
+            style="@style/AppTheme.Button.Highlight"
+            android:onClick="click"
+            />
+        <Button
+            android:text="3 滑动冲突"
+            android:id="@+id/third"
+            android:layout_marginTop="10dp"
+            style="@style/AppTheme.Button.Highlight"
+            android:onClick="click"
+            />
+        <Button
+            android:text="4 view工作原理"
+            android:id="@+id/fourth"
+            android:layout_marginTop="10dp"
+            style="@style/AppTheme.Button.Highlight"
+            android:onClick="click"
+            />
+        <Button
+            android:text="5 remoteview工作原理"
+            android:id="@+id/fifth"
+            android:layout_marginTop="10dp"
+            style="@style/AppTheme.Button.Highlight"
+            android:onClick="click"
+            />
+        <Button
+            android:text="6 Drawble"
+            android:id="@+id/six"
+            android:layout_marginTop="10dp"
+            style="@style/AppTheme.Button.Highlight"
+            android:onClick="click"
+            />
+        <Button
+            android:text="7 动画"
+            android:id="@+id/seven"
+            android:layout_marginTop="10dp"
+            style="@style/AppTheme.Button.Highlight"
+            android:onClick="click"
+            />
+        <Button
+            android:text="8 window"
+            android:id="@+id/eight"
+            android:layout_marginTop="10dp"
+            style="@style/AppTheme.Button.Highlight"
+            android:onClick="click"
+            />
+        <Button
+            android:text="9 imageloder"
+            android:id="@+id/nine"
+            android:layout_marginTop="10dp"
+            style="@style/AppTheme.Button.Highlight"
+            android:onClick="click"
+            />
+    </com.shixing.mixture.view.RevealLayout>
+</ScrollView>

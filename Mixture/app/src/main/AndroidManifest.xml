@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shixing.mixture">
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".MyApplication">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".first.F1Activity"
+            android:launchMode="standard"
+            >
+            <intent-filter>
+                <action android:name="com.csx.fitst"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".first.F1BActivity"
+            android:taskAffinity="com.csx.ff"
+            android:launchMode="singleTop"
+            />
+        <activity android:name=".first.F1CActivity"
+            android:taskAffinity="com.csx.ff"
+            android:launchMode="singleTask"
+            />
+        <activity android:name=".first.F1DActivity"
+            android:taskAffinity="com.csx.ff"
+            android:launchMode="singleInstance"
+            />
+        <activity android:name=".first.F1EActivity"
+            android:launchMode="standard" />
+        <activity android:name=".second.S2Activity" />
+        <activity android:name=".second.S2BActivity" android:process=":remote" />
+        <activity android:name=".third.T3DifferentDirectionActivity" />
+        <activity android:name=".third.T3Activity" />
+        <activity android:name=".third.T3SameDirectionActivity" />
+        <activity android:name=".fourth.F4Activity" />
+        <activity android:name=".fourth.F4SelfViewActivity" />
+        <activity android:name=".fourth.F4CombineAnimatorActivity" />
+        <activity android:name=".fourth.F4CombineAnimationActivity" />
+        <activity android:name=".fourth.F4SlideViewGroupAvtivity" />
+        <activity android:name=".fourth.F4ListViewActivity" />
+        <activity android:name=".fifth.F5Activity" />
+        <activity android:name=".fifth.F5FirstActivity" android:process=":remote"/>
+        <activity android:name=".fifth.F5SecondActivity" />
+        <activity android:name=".sixth.S6Activity" />
+        <activity android:name=".seventh.S7Activity" />
+        <activity android:name=".seventh.S7AnimatorActivity" />
+        <activity android:name=".seventh.S7ListViewActivity" />
+        <activity android:name=".seventh.S7SecondActivity" />
+        <activity android:name=".eight.E8Activity" />
+        <activity android:name=".ninth.N9Activity" />
+        <activity android:name=".fourth.F4ListViewActivityFlexable" />
+        <activity android:name=".fourth.F4ListViewActivityRefreshListView" />
+    </application>
+
+</manifest>

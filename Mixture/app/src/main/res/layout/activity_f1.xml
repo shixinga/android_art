@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shixing.mixture.view.RevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:text="A"
+        />
+    <Button
+        android:id="@+id/standard"
+        android:text="standard,打开自己"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+    <Button
+        android:id="@+id/singleTop"
+        android:text="singleTop"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+    <Button
+        android:id="@+id/singleTask"
+        android:text="singleTask"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+    <Button
+        android:id="@+id/singleInstance"
+        android:text="singleInstance"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />
+  <!--  <Button
+        android:id="@+id/singleInstanceTest"
+        android:text="singleInstance AE同task吗"
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Highlight"
+        android:onClick="click"
+        />-->
+</com.shixing.mixture.view.RevealLayout>

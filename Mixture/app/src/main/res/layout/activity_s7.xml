@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <Button
+        android:onClick="secondActivityClick"
+        style="@style/AppTheme.Button.Green"
+        android:text="secondActivityClick"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="test"
+        android:text="test"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Green"
+        android:onClick="frameAnimationClick"
+        android:text="frameAnimationClick"
+        />
+
+    <Button
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Green"
+        android:onClick="listViewActivity"
+        android:text="listViewActivity"
+        />
+
+    <Button
+        android:layout_marginTop="10dp"
+        style="@style/AppTheme.Button.Green"
+        android:onClick="animatorClick"
+        android:text="animatorClick"
+        />
+</LinearLayout>
