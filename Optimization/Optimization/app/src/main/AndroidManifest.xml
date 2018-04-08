@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -35,7 +36,9 @@
         <activity android:name=".s3.S3JobServiceActivity" />
         <activity android:name=".s4.S4BitmapActivity" />
         <activity android:name=".s4.S4Activity" />
-
+        <activity android:name=".s5.S5Avtivity" />
+        <activity android:name=".s6.S6Avitivity" />
+        <activity android:name=".s6.KeepAliveAvitivity" android:theme="@style/KeepAliveStyle" />
         <receiver android:name=".s3.S3MyBroadcast">
             <intent-filter>
                 <action android:name="nihaoa"/>
@@ -43,6 +46,7 @@
         </receiver>
         <service android:name=".s3.MyJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name=".s6.MyService"/>
     </application>
 
 </manifest>
