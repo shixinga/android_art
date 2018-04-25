@@ -7,7 +7,11 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
-        classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
+
+        //由于该plugin没有被APP或common Module模块apply，所以可以注释掉下面的代码
+//        classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
+
+
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

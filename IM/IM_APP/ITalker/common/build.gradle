@@ -1,5 +1,8 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.jakewharton.butterknife'
+//下面的代码可以注释掉
+//apply plugin: 'com.jakewharton.butterknife'
+
+
 android {
     compileSdkVersion 26
     buildToolsVersion "27.0.1"
@@ -27,6 +30,9 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.ext.supportVersion"
+
+
     compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
     testCompile 'junit:junit:4.12'
