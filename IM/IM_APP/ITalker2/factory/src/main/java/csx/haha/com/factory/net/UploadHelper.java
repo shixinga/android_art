@@ -31,6 +31,7 @@ public class UploadHelper {
 
     private static OSS getClient() {
         // 明文设置secret的方式建议只在测试时使用，更多鉴权模式请参考后面的`访问控制`章节
+        //Access Key ID 和 Access Key Secret 记得修改！！！
         OSSCredentialProvider credentialProvider = new OSSPlainTextAKSKCredentialProvider(
                 "LTAIz1nLi7nT4Ryk", "ZiaMwnXDm2TFpUV3C1x41C29auozjZ");
         return new OSSClient(MyApplication.getInstance(), ENDPOINT, credentialProvider);
