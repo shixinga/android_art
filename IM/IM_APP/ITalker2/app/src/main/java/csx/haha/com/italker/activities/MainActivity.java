@@ -31,6 +31,7 @@ import butterknife.OnClick;
 import csx.haha.com.common.Common;
 import csx.haha.com.common.app.BaseActivity;
 import csx.haha.com.common.widget.PortraitView;
+import csx.haha.com.factory.persistence.Account;
 import csx.haha.com.italker.R;
 import csx.haha.com.italker.activities.AccountActivity;
 import csx.haha.com.italker.frags.assist.PermissionsFragment;
@@ -74,6 +75,17 @@ public class MainActivity extends BaseActivity implements
      */
     public static void show(Context context) {
         context.startActivity(new Intent(context, MainActivity.class));
+    }
+
+    @Override
+    protected boolean initArgs(Bundle bundle) {
+        if (Account.isComplete()) {
+            return super.initArgs(bundle);
+        } else {
+            UserActivity.show(this);
+            return false;
+        }
+
     }
 
     @Override

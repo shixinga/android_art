@@ -17,8 +17,6 @@ import csx.haha.com.italker.R;
  */
 public class ActiveFragment extends BaseFragment {
 
-    /*@BindView(R.id.galleyView)
-    GalleryView mGalley;*/
 
     public ActiveFragment() {
         // Required empty public constructor
@@ -34,11 +32,5 @@ public class ActiveFragment extends BaseFragment {
     @Override
     protected void initData() {
         super.initData();
-       /* mGalley.setUp(getLoaderManager(), new GalleryView.SelectChangeListener() {
-            @Override
-            public void onSelectedCountChanged(int count) {
-
-            }
-        });*/
     }
 }

@@ -47,22 +47,22 @@ public abstract class BaseFragment extends Fragment {
         return mRoot;
     }
 
-   /* @Override
+    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
-Log.d(TAG, "onCreate: " + this);
+//Log.d(TAG, "onCreate: " + this);
         super.onCreate(savedInstanceState);
 
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-Log.d(TAG, "onActivityCreated: " + this);
+//Log.d(TAG, "onActivityCreated: " + this);
         super.onActivityCreated(savedInstanceState);
     }
 
-    @Override
+ /*   @Override
     public void onPause() {
-Log.d(TAG, "onPause: ");
+Log.d(TAG, "onPause: " + this);
         super.onPause();
     }
 
