@@ -310,7 +310,8 @@ public class UserFactory {
         return Hib.query(session -> {
             // 查询的条件：name忽略大小写，并且使用like（模糊）查询；
             // 头像和描述必须完善才能查询到
-            return (List<User>) session.createQuery("from User where lower(name) like :name and portrait is not null and description is not null")
+//            return (List<User>) session.createQuery("from User where lower(name) like :name and portrait is not null and description is not null")
+            return (List<User>) session.createQuery("from User where lower(name) like :name")
                     .setParameter("name", searchName)
                     .setMaxResults(20) // 至多20条
                     .list();

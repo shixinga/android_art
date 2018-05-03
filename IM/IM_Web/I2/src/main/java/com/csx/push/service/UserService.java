@@ -152,7 +152,9 @@ public class UserService extends BaseService {
 
         // 拿出我的联系人
         final List<User> contacts = UserFactory.contacts(self);
-
+for (User u : searchUsers) {
+    System.out.println("searchname=" + name +  " : " + u.getName() + ", size=" + searchUsers.size());
+}
         // 把User->UserCard
         List<UserCard> userCards = searchUsers.stream()
                 .map(user -> {
