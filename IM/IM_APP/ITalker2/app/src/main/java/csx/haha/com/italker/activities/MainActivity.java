@@ -80,8 +80,11 @@ public class MainActivity extends BaseActivity implements
     @Override
     protected boolean initArgs(Bundle bundle) {
         if (Account.isComplete()) {
+            Log.d(TAG, "initArgs: complete!!!!!!");
+
             return super.initArgs(bundle);
         } else {
+            Log.d(TAG, "initArgs: nocomplete!!!!!!");
             UserActivity.show(this);
             return false;
         }
@@ -128,15 +131,35 @@ public class MainActivity extends BaseActivity implements
         //触发首次选中Home
         menu.performIdentifierAction(R.id.action_home, 0);
 
+        //初始化头像
+        mPortraitView.setup(Glide.with(this), Account.getUser());
+
     }
+
+    @OnClick(R.id.im_portrait)
+    void onPortraitClick() {
+        PersonalActivity.show(this, Account.getUserId());
+    }
+
 
     @OnClick(R.id.im_search)
     public void onSearchMenuClick() {
-        Toast.makeText(this,"jj",Toast.LENGTH_SHORT).show();
+        //如果当前是在群的界面，则打开搜索群的界面
+        //否则都是打开个人搜索界面
+        int type = Objects.equals(mNavHelper.getCurrentTab().extra, R.string.title_group) ?
+                SearchActivity.TYPE_GROUP : SearchActivity.TYPE_USER;
+        SearchActivity.show(this, type);
+
     }
     @OnClick(R.id.btn_action)
     public void onActionClick() {
-        AccountActivity.show(this);
+        //浮动按钮点击时，判断当前界面是群界面还是联系人界面
+        if (Objects.equals(mNavHelper.getCurrentTab().extra, R.string.title_group)) {
+            //TODO 打开创建群的界面
+        } else {
+            //打开添加用户的界面
+            SearchActivity.show(this, SearchActivity.TYPE_USER);
+        }
     }
 
 

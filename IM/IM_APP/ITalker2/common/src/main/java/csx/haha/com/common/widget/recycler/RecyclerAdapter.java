@@ -62,7 +62,7 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<RecyclerAd
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View root = inflater.inflate(viewType, parent, false);
         //子类来实现创建Viewholder
-        MyViewHolder holder = myOnCreateViewHolder(root, viewType);
+        MyViewHolder<T> holder = myOnCreateViewHolder(root, viewType);
 
         root.setOnClickListener(this);
         root.setOnLongClickListener(this);
@@ -84,7 +84,7 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<RecyclerAd
      * @param viewType 布局类型，其实就是一个XML的ID
      * @return
      */
-    protected abstract MyViewHolder myOnCreateViewHolder(View root, int viewType);
+    protected abstract MyViewHolder<T> myOnCreateViewHolder(View root, int viewType);
 
     @Override
     public void onBindViewHolder(MyViewHolder<T> holder, int position) {
@@ -96,6 +96,14 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<RecyclerAd
     @Override
     public int getItemCount() {
         return mDataList.size();
+    }
+
+    /**
+     * 返回整个集合
+     * @return
+     */
+    public List<T> getItems() {
+        return mDataList;
     }
 
     /**

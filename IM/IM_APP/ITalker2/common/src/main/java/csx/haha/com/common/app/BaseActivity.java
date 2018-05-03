@@ -9,6 +9,7 @@ import android.util.Log;
 import java.util.List;
 
 import butterknife.ButterKnife;
+import csx.haha.com.common.widget.convention.PlaceHolderView;
 
 /**
  * Created by sunray on 2018-4-17.
@@ -16,6 +17,8 @@ import butterknife.ButterKnife;
 
 public abstract class BaseActivity extends AppCompatActivity {
     private static final String TAG = "BaseActivity";
+    protected PlaceHolderView mPlaceHolderView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +28,19 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (initArgs(getIntent().getExtras())) {
             int layId = getContentLayoutId();
             setContentView(layId);
+            initBefore();
             initWidget();
             initData();
         } else {
             finish();
         }
+    }
+
+    /**
+     * 初始化控件调用之前
+     */
+    protected void initBefore() {
+
     }
 
     /**

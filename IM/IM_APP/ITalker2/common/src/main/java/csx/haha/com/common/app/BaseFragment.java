@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import csx.haha.com.common.widget.convention.PlaceHolderView;
 
 /**
  * Created by sunray on 2018-4-17.
@@ -20,6 +21,9 @@ public abstract class BaseFragment extends Fragment {
     private static final String TAG = "MainActivity";
     protected View mRoot;
     protected Unbinder mRootUnBinder;
+    protected PlaceHolderView mPlaceHolderView;
+    // 标示是否第一次初始化数据
+    protected boolean mIsFirstInitData = true;
 
     @Override
     public void onAttach(Context context) {
@@ -93,9 +97,22 @@ Log.d(TAG, "onDestroyView: " + this);
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 //Log.d(TAG, "onViewCreated: " + this);
+        if (mIsFirstInitData) {
+            // 触发一次以后就不会触发
+            mIsFirstInitData = false;
+            // 触发
+            onFirstInit();
+        }
         super.onViewCreated(view, savedInstanceState);
         //当view创建完成后对数据进行初始化
         initData();
+    }
+
+    /**
+     * 当首次初始化数据的时候会调用的方法
+     */
+    protected void onFirstInit() {
+
     }
 
     /**
@@ -136,4 +153,11 @@ Log.d(TAG, "onDestroyView: " + this);
         return false;
     }
 
+    /**
+     * 设置占位布局
+     * @param placeHolderView 继承了占位布局的view
+     */
+    public void setPlaceHolderView(PlaceHolderView placeHolderView) {
+        this.mPlaceHolderView = placeHolderView;
+    }
 }
