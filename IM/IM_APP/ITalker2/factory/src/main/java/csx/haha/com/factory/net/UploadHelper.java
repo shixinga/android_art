@@ -24,7 +24,7 @@ import csx.haha.com.utils.HashUtil;
 
 public class UploadHelper {
     private static final String TAG = "MAinActivity";
-    private static final String  ENDPOINT =  "oss-cn-shenzhen.aliyuncs.com";
+    public static final String  ENDPOINT =  "oss-cn-shenzhen.aliyuncs.com";
     // 上传的仓库名
     private static final String BUCKET_NAME = "csx0405";
 
