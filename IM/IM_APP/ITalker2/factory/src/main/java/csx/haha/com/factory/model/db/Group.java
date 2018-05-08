@@ -10,6 +10,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+import csx.haha.com.factory.data.helper.GroupHelper;
+import csx.haha.com.factory.model.db.view.MemberUserModel;
+
 
 /**
  * 群信息Model
@@ -146,7 +149,7 @@ public class Group extends BaseDbModel<Group> implements Serializable {
     private long groupMemberCount = -1;
 
     // 获取当前群的成员数量，使用内存缓存
-    /*public long getGroupMemberCount() {
+    public long getGroupMemberCount() {
         if (groupMemberCount == -1) {
             // -1 没有初始化
             groupMemberCount = GroupHelper.getMemberCount(id);
@@ -163,5 +166,5 @@ public class Group extends BaseDbModel<Group> implements Serializable {
         }
 
         return groupLatelyMembers;
-    }*/
+    }
 }

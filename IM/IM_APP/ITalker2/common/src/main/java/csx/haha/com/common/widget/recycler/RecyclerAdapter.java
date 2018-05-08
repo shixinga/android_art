@@ -174,7 +174,10 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<RecyclerAd
     @Override
     public void onClick(View v) {
         MyViewHolder viewHolder = (MyViewHolder) v.getTag(R.id.tag_recycler_holder);
-        if (this.mListener != null) {
+        if (this.
+
+
+                != null) {
             //得到ViewHolder当前对应的适配器中的坐标
             int pos = viewHolder.getAdapterPosition();
             //回调方法

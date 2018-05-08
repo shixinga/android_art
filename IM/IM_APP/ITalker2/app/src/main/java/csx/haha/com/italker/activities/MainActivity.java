@@ -155,7 +155,9 @@ public class MainActivity extends BaseActivity implements
     public void onActionClick() {
         //浮动按钮点击时，判断当前界面是群界面还是联系人界面
         if (Objects.equals(mNavHelper.getCurrentTab().extra, R.string.title_group)) {
-            //TODO 打开创建群的界面
+            //打开创建群的界面
+            GroupCreateActivity.show(this);
+
         } else {
             //打开添加用户的界面
             SearchActivity.show(this, SearchActivity.TYPE_USER);

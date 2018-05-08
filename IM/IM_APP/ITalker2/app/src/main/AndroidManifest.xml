@@ -61,13 +61,17 @@
             android:name=".activities.SearchActivity"
             android:label="搜索"
             android:theme="@style/AppTheme.TransStatusBar" />
-        <activity android:name=".activities.MessageActivity"
+        <activity
+            android:name=".activities.MessageActivity"
             android:label="MessageActivity"
-            android:theme="@style/AppTheme.Message"/>
-        <activity android:name=".activities.PersonalActivity"
+            android:theme="@style/AppTheme.Message" />
+        <activity
+            android:name=".activities.PersonalActivity"
             android:label="PersonalActivity"
-            android:theme="@style/AppTheme.TransStatusBar"
-            />
+            android:theme="@style/AppTheme.TransStatusBar" />
+        <activity android:name=".activities.GroupCreateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Group.Create" />
     </application>
 
 </manifest>

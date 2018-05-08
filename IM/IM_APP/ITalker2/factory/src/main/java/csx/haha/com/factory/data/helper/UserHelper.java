@@ -11,8 +11,10 @@ import csx.haha.com.factory.model.api.user.UserUpdateModel;
 import csx.haha.com.factory.model.card.UserCard;
 import csx.haha.com.factory.model.db.User;
 import csx.haha.com.factory.model.db.User_Table;
+import csx.haha.com.factory.model.db.view.UserSampleModel;
 import csx.haha.com.factory.net.Network;
 import csx.haha.com.factory.net.RemoteService;
+import csx.haha.com.factory.persistence.Account;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -205,7 +207,7 @@ public class UserHelper {
     /**
      * 获取联系人
      */
-    /*public static List<User> getContact() {
+    public static List<User> getContact() {
         return SQLite.select()
                 .from(User.class)
                 .where(User_Table.isFollow.eq(true))
@@ -229,6 +231,6 @@ public class UserHelper {
                 .and(User_Table.id.notEq(Account.getUserId()))
                 .orderBy(User_Table.name, true)
                 .queryCustomList(UserSampleModel.class);
-    }*/
+    }
 
 }
