@@ -11,6 +11,7 @@ import com.raizlabs.android.dbflow.sql.language.SQLite;
 
 import java.io.File;
 
+import csx.haha.com.common.Common;
 import csx.haha.com.common.app.MyApplication;
 import csx.haha.com.factory.Factory;
 import csx.haha.com.factory.model.api.RspModel;
@@ -21,6 +22,8 @@ import csx.haha.com.factory.model.db.Message_Table;
 import csx.haha.com.factory.net.Network;
 import csx.haha.com.factory.net.RemoteService;
 import csx.haha.com.factory.net.UploadHelper;
+import csx.haha.com.utils.PicturesCompressor;
+import csx.haha.com.utils.StreamUtil;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -68,7 +71,7 @@ public class MessageHelper {
 
                         switch (card.getType()) {
                             case Message.TYPE_PIC:
-//                                content = uploadPicture(card.getContent());
+                                content = uploadPicture(card.getContent());
                                 break;
                             case Message.TYPE_AUDIO:
                                 content = uploadAudio(card.getContent());
@@ -82,6 +85,7 @@ public class MessageHelper {
                             // 失败
                             card.setStatus(Message.STATUS_FAILED);
                             Factory.getMessageCenter().dispatch(card);
+                            return;
                         }
 
 
@@ -127,40 +131,40 @@ public class MessageHelper {
     }
 
     // 上传图片
-//    private static String uploadPicture(String path) {
-//        File file = null;
-//        try {
-//            // 通过Glide的缓存区间解决了图片外部权限的问题
-//            file = Glide.with(MyApplication.getInstance())
-//                    .load(path)
-//                    .downloadOnly(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
-//                    .get();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//        if (file != null) {
-//            // 进行压缩
-//            String cacheDir = MyApplication.getInstance().getCacheDirFile().getAbsolutePath();
-//            String tempFile = String.format("%s/image/Cache_%s.png", cacheDir, SystemClock.uptimeMillis());
-//
-//            try {
-//                // 压缩工具类
-//                if (PicturesCompressor.compressImage(file.getAbsolutePath(), tempFile,
-//                        Common.Constance.MAX_UPLOAD_IMAGE_LENGTH)) {
-//                    // 上传
-//                    String ossPath = UploadHelper.uploadImage(tempFile);
-//                    // 清理缓存
-//                    StreamUtil.delete(tempFile);
-//                    return ossPath;
-//                }
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        }
-//
-//        return null;
-//    }
+    private static String uploadPicture(String path) {
+        File file = null;
+        try {
+            // 通过Glide的缓存区间解决了图片外部权限的问题
+            file = Glide.with(MyApplication.getInstance())
+                    .load(path)
+                    .downloadOnly(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
+                    .get();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        if (file != null) {
+            // 进行压缩
+            String cacheDir = MyApplication.getInstance().getCacheDirFile().getAbsolutePath();
+            String tempFile = String.format("%s/image/Cache_%s.png", cacheDir, SystemClock.uptimeMillis());
+
+            try {
+                // 压缩工具类
+                if (PicturesCompressor.compressImage(file.getAbsolutePath(), tempFile,
+                        Common.Constance.MAX_UPLOAD_IMAGE_LENGTH)) {
+                    // 上传
+                    String ossPath = UploadHelper.uploadImage(tempFile);
+                    // 清理缓存
+                    StreamUtil.delete(tempFile);
+                    return ossPath;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        return null;
+    }
 
     // 上传语音
     private static String uploadAudio(String content) {

@@ -34,7 +34,7 @@ public class GalleryView extends RecyclerView {
     private static final int LOADER_ID = 0x0100;
     private List<Image> mSelectImages = new LinkedList<>();
     private static final int MAX_IMAGE_COUNT = 3; //最大的图片选中个数
-    private SelectChangeListener mListener;
+    private SelectedChangeListener mListener;
     private static final int MIN_IMAGE_FILE_SIZE = 10 * 1024; //最小的图片大小为10kB
 
 
@@ -75,7 +75,7 @@ public class GalleryView extends RecyclerView {
      * @param loaderManager
      * @return 任何一个LOADER_ID,可用于销毁Loader
      */
-    public int setUp(LoaderManager loaderManager, SelectChangeListener listener) {
+    public int setUp(LoaderManager loaderManager, SelectedChangeListener listener) {
         this.mListener = listener;
         loaderManager.initLoader(LOADER_ID, null, mLoaderCallback);
         return LOADER_ID;
@@ -146,6 +146,9 @@ public class GalleryView extends RecyclerView {
         }
         mSelectImages.clear();
         mAdapter.notifyDataSetChanged();
+
+        //发送后将选中图片个数设为0
+        notifySelectChanged();
     }
 
     /**
@@ -291,7 +294,7 @@ public class GalleryView extends RecyclerView {
         }
     }
 
-    public interface SelectChangeListener {
+    public interface SelectedChangeListener {
         void onSelectedCountChanged(int count);
     }
 

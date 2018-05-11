@@ -39,10 +39,16 @@ dependencies {
     compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
     compile "net.qiujuer.genius:kit-handler:$rootProject.ext.geniusVersion"
 
+    // 空气面板
+    compile "net.qiujuer.widget:airpanel:$rootProject.ext.airpanelVersion"
+
+    compile "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
 
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
     testCompile 'junit:junit:4.12'
 
 
     compile project(':lang')
+    compile project(':face-res')
+    compile 'com.google.code.gson:gson:2.8.0'
 }

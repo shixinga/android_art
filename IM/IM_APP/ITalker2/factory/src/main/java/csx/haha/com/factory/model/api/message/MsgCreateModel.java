@@ -13,7 +13,7 @@ public class MsgCreateModel {
     private String content;
     private String attach;
 
-    // 消息类型
+    // 消息类型(文本、图片、声音)
     private int type = Message.TYPE_STR;
 
     // 接收者 可为空

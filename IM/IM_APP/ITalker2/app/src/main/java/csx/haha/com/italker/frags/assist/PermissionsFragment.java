@@ -40,7 +40,7 @@ public class PermissionsFragment extends BottomSheetDialogFragment
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         //复用即可
-        return new GalleryFragment.TransStatusButtomSheetDialog(getContext());
+        return new GalleryFragment.TransStatusBottomSheetDialog(getContext());
     }
 
     @Override

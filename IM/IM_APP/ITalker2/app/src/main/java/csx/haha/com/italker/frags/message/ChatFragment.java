@@ -2,6 +2,7 @@ package csx.haha.com.italker.frags.message;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -16,6 +17,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewStub;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -25,7 +27,10 @@ import com.bumptech.glide.Glide;
 import net.qiujuer.genius.ui.Ui;
 import net.qiujuer.genius.ui.compat.UiCompat;
 import net.qiujuer.genius.ui.widget.Loading;
+import net.qiujuer.widget.airpanel.AirPanel;
+import net.qiujuer.widget.airpanel.Util;
 
+import java.io.File;
 import java.util.Objects;
 
 import butterknife.BindView;
@@ -34,12 +39,14 @@ import csx.haha.com.common.app.PresenterFragment;
 import csx.haha.com.common.widget.PortraitView;
 import csx.haha.com.common.widget.adapter.TextWatcherAdapter;
 import csx.haha.com.common.widget.recycler.RecyclerAdapter;
+import csx.haha.com.face.Face;
 import csx.haha.com.factory.model.db.Message;
 import csx.haha.com.factory.model.db.User;
 import csx.haha.com.factory.persistence.Account;
 import csx.haha.com.factory.presenter.message.ChatContract;
 import csx.haha.com.italker.R;
 import csx.haha.com.italker.activities.MessageActivity;
+import csx.haha.com.italker.frags.panel.PanelFragment;
 
 /**
  * 用户聊天界面
@@ -47,7 +54,8 @@ import csx.haha.com.italker.activities.MessageActivity;
  */
 
 public abstract class ChatFragment<InitModel> extends PresenterFragment<ChatContract.Presenter>
-    implements AppBarLayout.OnOffsetChangedListener, ChatContract.View<InitModel> {
+    implements AppBarLayout.OnOffsetChangedListener, ChatContract.View<InitModel>
+        , PanelFragment.PanelCallback {
     private static final String TAG = "MainActivity";
     protected String mReceiverId;
     protected Adapter mAdapter;
@@ -70,9 +78,9 @@ public abstract class ChatFragment<InitModel> extends PresenterFragment<ChatCont
     @BindView(R.id.btn_submit)
     View mSubmit;
 
-//    // 控制顶部面板与软键盘过度的Boss控件
-//    private AirPanel.Boss mPanelBoss;
-//    private PanelFragment mPanelFragment;
+    // 控制顶部面板与软键盘过度的Boss控件
+    private AirPanel.Boss mPanelBoss;
+    private PanelFragment mPanelFragment;
 
 
     @Override
@@ -80,10 +88,52 @@ public abstract class ChatFragment<InitModel> extends PresenterFragment<ChatCont
         super.initArgs(bundle);
         mReceiverId = bundle.getString(MessageActivity.KEY_RECEIVER_ID);
     }
-
+    // 得到顶部布局的资源Id
+    @LayoutRes
+    protected abstract int getHeaderLayoutId();
+    @Override
+    protected final int getContentLayoutId() {
+        return R.layout.fragment_chat_common;
+    }
     @Override
     protected void initWidget(View root) {
+        // 拿到占位布局
+        // 替换顶部布局一定需要发生在super之前
+        // 防止控件绑定异常
+        ViewStub viewStub = root.findViewById(R.id.view_stub_header);
+        viewStub.setLayoutResource(getHeaderLayoutId());
+        viewStub.inflate();
+        // 在这里进行了控件绑定
         super.initWidget(root);
+
+        // 初始化面板操作
+        mPanelBoss = (AirPanel.Boss) root.findViewById(R.id.lay_content);
+        mPanelBoss.setup(new AirPanel.PanelListener() {
+            @Override
+            public void requestHideSoftKeyboard() {
+                // 请求隐藏软键盘
+                Util.hideKeyboard(mContent);
+            }
+        });
+        mPanelBoss.setOnStateChangedListener(new AirPanel.OnStateChangedListener() {
+            @Override
+            public void onPanelStateChanged(boolean isOpen) {
+                //面板改变
+                if (isOpen) {
+                    onBottomPanelOpened();
+                }
+            }
+
+            @Override
+            public void onSoftKeyboardStateChanged(boolean isOpen) {
+                //软键盘改变
+                if (isOpen) {
+                    onBottomPanelOpened();
+                }
+            }
+        });
+        mPanelFragment = (PanelFragment) getChildFragmentManager().findFragmentById(R.id.frag_panel);
+        mPanelFragment.setup(this);
 
         initToolbar();
         initAppbar();
@@ -94,6 +144,12 @@ public abstract class ChatFragment<InitModel> extends PresenterFragment<ChatCont
         mRecyclerView.setAdapter(mAdapter);
     }
 
+    private void onBottomPanelOpened() {
+        //当底部面板或者软键盘打开时触发
+        if (mAppBarLayout != null) {
+            mAppBarLayout.setExpanded(false, true);
+        }
+    }
     @Override
     protected void initData() {
         super.initData();
@@ -133,10 +189,13 @@ public abstract class ChatFragment<InitModel> extends PresenterFragment<ChatCont
 
     @OnClick(R.id.btn_face)
     void onFaceClick() {
+        // 仅仅只需请求打开即可
+        mPanelBoss.openPanel();
+        mPanelFragment.showFace();
     }
-    @OnClick(R.id.btn_record)
-    void onRecordClick() {
-    }
+//    @OnClick(R.id.btn_record)
+//    void onRecordClick() {
+//    }
     @OnClick(R.id.btn_submit)
     void onSubmitClick() {
         if (mSubmit.isActivated()) {
@@ -150,7 +209,8 @@ public abstract class ChatFragment<InitModel> extends PresenterFragment<ChatCont
     }
 
     private void onMoreClick() {
-
+        mPanelBoss.openPanel();
+        mPanelFragment.showGallery();
     }
 
     @Override
@@ -161,6 +221,33 @@ public abstract class ChatFragment<InitModel> extends PresenterFragment<ChatCont
     @Override
     public void onAdapterDataChanged() {
         // 界面没有占位布局，Recycler是一直显示的，所有不需要做任何事情
+    }
+
+    @Override
+    public EditText getInputEditText() {
+        // 返回输入框
+        return mContent;
+    }
+
+    @Override
+    public void onSendGallery(String[] paths) {
+        // 图片回调回来
+        mPresenter.pushImages(paths);
+    }
+
+    @Override
+    public void onRecordDone(File file, long time) {
+        // TODO 语音回调回来
+    }
+
+    @Override
+    public boolean onBackPressed() {
+        if (mPanelBoss.isOpen()) {
+            //关闭面板并且返回true，代表自己拦截该事件并处理
+            mPanelBoss.closePanel();
+            return true;
+        }
+        return super.onBackPressed();
     }
 
     private class Adapter extends RecyclerAdapter<Message> {
@@ -197,13 +284,13 @@ public abstract class ChatFragment<InitModel> extends PresenterFragment<ChatCont
                 case R.layout.cell_chat_text_left:
                     return new TextHolder(root);
 
-//                case R.layout.cell_chat_audio_right:
-//                case R.layout.cell_chat_audio_left:
-//                    return new AudioHolder(root);
-//
-//                case R.layout.cell_chat_pic_right:
-//                case R.layout.cell_chat_pic_left:
-//                    return new PicHolder(root);
+                case R.layout.cell_chat_audio_right:
+                case R.layout.cell_chat_audio_left:
+                    return new AudioHolder(root);
+
+                case R.layout.cell_chat_pic_right:
+                case R.layout.cell_chat_pic_left:
+                    return new PicHolder(root);
 
                 // 默认情况下，返回的就是Text类型的Holder进行处理
                 // 文件的一些实现
@@ -291,12 +378,13 @@ public abstract class ChatFragment<InitModel> extends PresenterFragment<ChatCont
             Spannable spannable = new SpannableString(message.getContent());
 
             // 解析表情
-//            Face.decode(mContent, spannable, (int) Ui.dipToPx(getResources(), 20));
+            Face.decode(mContent, spannable, (int) Ui.dipToPx(getResources(), 20));
 
             // 把内容设置到布局上
             mContent.setText(spannable);
         }
     }
+
 
     // 语音的Holder
     class AudioHolder extends BaseHolder {

@@ -5,6 +5,7 @@ import java.util.List;
 import csx.haha.com.factory.model.db.Group;
 import csx.haha.com.factory.model.db.Message;
 import csx.haha.com.factory.model.db.User;
+import csx.haha.com.factory.model.db.view.MemberUserModel;
 import csx.haha.com.factory.presenter.BaseContract;
 
 /**
@@ -40,9 +41,9 @@ public interface ChatContract {
     // 群聊天的界面
     interface GroupView extends View<Group> {
         // 显示管理员菜单
-//        void showAdminOption(boolean isAdmin);
-//
-//        // 初始化成员信息
-//        void onInitGroupMembers(List<MemberUserModel> members, long moreCount);
+        void showAdminOption(boolean isAdmin);
+
+        // 初始化成员信息
+        void onInitGroupMembers(List<MemberUserModel> members, long moreCount);
     }
 }

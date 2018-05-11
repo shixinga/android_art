@@ -57,6 +57,8 @@ public class MessageDispatcher implements MessageCenter {
             this.cards = cards;
         }
 
+        //MessageCard：网络回来的消息或者是自己创建的消息
+        //Message: 本地数据库存储的消息
         @Override
         public void run() {
             List<Message> messages = new ArrayList<>();

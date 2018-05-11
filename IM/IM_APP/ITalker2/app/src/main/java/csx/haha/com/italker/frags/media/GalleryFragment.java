@@ -24,7 +24,7 @@ import csx.haha.com.italker.R;
  * A simple {@link Fragment} subclass.
  */
 public class GalleryFragment extends BottomSheetDialogFragment
-        implements GalleryView.SelectChangeListener{
+        implements GalleryView.SelectedChangeListener {
 
     private GalleryView mGalleryView;
     private OnSelectedListener mListener;
@@ -37,7 +37,7 @@ public class GalleryFragment extends BottomSheetDialogFragment
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         //先使用默认的GalleryView
-        return new TransStatusButtomSheetDialog(getContext());
+        return new TransStatusBottomSheetDialog(getContext());
     }
 
     @Override
@@ -80,17 +80,17 @@ public class GalleryFragment extends BottomSheetDialogFragment
         void onSelectedImage(String path);
     }
 
-    public static class TransStatusButtomSheetDialog extends BottomSheetDialog {
+    public static class TransStatusBottomSheetDialog extends BottomSheetDialog {
 
-        public TransStatusButtomSheetDialog(@NonNull Context context) {
+        public TransStatusBottomSheetDialog(@NonNull Context context) {
             super(context);
         }
 
-        public TransStatusButtomSheetDialog(@NonNull Context context, @StyleRes int theme) {
+        public TransStatusBottomSheetDialog(@NonNull Context context, @StyleRes int theme) {
             super(context, theme);
         }
 
-        protected TransStatusButtomSheetDialog(@NonNull Context context, boolean cancelable, OnCancelListener cancelListener) {
+        protected TransStatusBottomSheetDialog(@NonNull Context context, boolean cancelable, OnCancelListener cancelListener) {
             super(context, cancelable, cancelListener);
         }
 

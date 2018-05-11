@@ -18,6 +18,7 @@ import csx.haha.com.common.widget.EmptyView;
 import csx.haha.com.common.widget.GalleryView;
 import csx.haha.com.common.widget.PortraitView;
 import csx.haha.com.common.widget.recycler.RecyclerAdapter;
+import csx.haha.com.face.Face;
 import csx.haha.com.factory.model.db.Session;
 import csx.haha.com.factory.presenter.message.SessionContract;
 import csx.haha.com.factory.presenter.message.SessionPresenter;
@@ -130,7 +131,7 @@ public class ActiveFragment extends PresenterFragment<SessionContract.Presenter>
             String str = TextUtils.isEmpty(session.getContent()) ? "" : session.getContent();
             Spannable spannable = new SpannableString(str);
             // 解析表情
-//            Face.decode(mContent, spannable, (int) mContent.getTextSize());
+            Face.decode(mContent, spannable, (int) mContent.getTextSize());
             // 把内容设置到布局上
             mContent.setText(spannable);
 

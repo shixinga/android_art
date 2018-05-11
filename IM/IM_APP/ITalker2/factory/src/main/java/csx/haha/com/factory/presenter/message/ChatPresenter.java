@@ -59,13 +59,13 @@ public class ChatPresenter<View extends ChatContract.View>
         // 此时路径是本地的手机上的路径
         for (String path : paths) {
             // 构建一个新的消息
-//            MsgCreateModel model = new MsgCreateModel.Builder()
-//                    .receiver(mReceiverId, mReceiverType)
-//                    .content(path, Message.TYPE_PIC)
-//                    .build();
-//
-//            // 进行网络发送
-//            MessageHelper.push(model);
+            MsgCreateModel model = new MsgCreateModel.Builder()
+                    .receiver(mReceiverId, mReceiverType)
+                    .content(path, Message.TYPE_PIC)
+                    .build();
+
+            // 进行网络发送
+            MessageHelper.push(model);
         }
     }
 
