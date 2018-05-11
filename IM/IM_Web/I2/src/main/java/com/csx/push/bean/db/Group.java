@@ -1,5 +1,6 @@
 package com.csx.push.bean.db;
 
+import com.csx.push.bean.api.group.GroupCreateModel;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -63,12 +64,12 @@ public class Group {
 
     }
 
-  /*  public Group(User owner, GroupCreateModel model) {
+    public Group(User owner, GroupCreateModel model) {
         this.owner = owner;
         this.name = model.getName();
         this.description = model.getDesc();
         this.picture = model.getPicture();
-    }*/
+    }
 
 
     public String getId() {

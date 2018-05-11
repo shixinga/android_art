@@ -1,5 +1,6 @@
 package com.csx.push.bean.db;
 
+import com.csx.push.bean.api.message.MessageCreateModel;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -8,8 +9,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 /**
- * @author qiujuer Email:qiujuer@live.cn
- * @version 1.0.0
+ *
  */
 @Entity
 @Table(name = "TB_MESSAGE")
@@ -94,7 +94,7 @@ public class Message {
     }
 
     // 普通朋友的发送的构造函数
-   /* public Message(User sender, User receiver, MessageCreateModel model) {
+    public Message(User sender, User receiver, MessageCreateModel model) {
         this.id = model.getId();
         this.content = model.getContent();
         this.attach = model.getAttach();
@@ -113,7 +113,7 @@ public class Message {
 
         this.sender = sender;
         this.group = group;
-    }*/
+    }
 
 
     public String getId() {
@@ -210,5 +210,23 @@ public class Message {
 
     public void setGroupId(String groupId) {
         this.groupId = groupId;
+    }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id='" + id + '\'' +
+                ", content='" + content + '\'' +
+                ", attach='" + attach + '\'' +
+                ", type=" + type +
+                ", createAt=" + createAt +
+                ", updateAt=" + updateAt +
+                ", sender=" + sender +
+                ", senderId='" + senderId + '\'' +
+                ", receiver=" + receiver +
+                ", receiverId='" + receiverId + '\'' +
+                ", group=" + group +
+                ", groupId='" + groupId + '\'' +
+                '}';
     }
 }

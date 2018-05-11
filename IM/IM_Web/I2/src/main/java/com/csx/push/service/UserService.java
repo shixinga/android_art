@@ -1,10 +1,12 @@
 package com.csx.push.service;
 
+import com.csx.push.bean.api.base.PushModel;
 import com.csx.push.bean.api.base.ResponseModel;
 import com.csx.push.bean.api.user.UpdateInfoModel;
 import com.csx.push.bean.card.UserCard;
 import com.csx.push.bean.db.User;
 import com.csx.push.factory.UserFactory;
+import com.csx.push.utils.PushDispatcher;
 import com.google.common.base.Strings;
 
 import javax.ws.rs.*;
@@ -50,6 +52,12 @@ public class UserService extends BaseService {
     @Produces(MediaType.APPLICATION_JSON)
     public ResponseModel<List<UserCard>> contact() {
         User self = getSelf();
+        //测试，发送消息给app
+//        PushModel model = new PushModel();
+//        model.add(new PushModel.Entity(0, "hi 你好！"));
+//        PushDispatcher dispatcher = new PushDispatcher();
+//        dispatcher.add(self, model);
+//        dispatcher.submit();
 
         // 拿到我的联系人
         List<User> users = UserFactory.contacts(self);
