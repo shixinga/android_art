@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shixing.toolbar.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:title="网易新闻"
+        app:titleTextColor="#ff0"
+        app:subtitle="旅行"
+        app:logo="@mipmap/ic_launcher"
+        app:navigationIcon="@mipmap/ic_launcher_round"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+       <!-- <TextView
+            android:text="aaaa"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />-->
+    </android.support.v7.widget.Toolbar>
+
+
+</LinearLayout>

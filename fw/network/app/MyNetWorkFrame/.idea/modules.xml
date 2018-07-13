@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FileDownload/FileDownload.iml" filepath="$PROJECT_DIR$/FileDownload/FileDownload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyNetWorkFrame.iml" filepath="$PROJECT_DIR$/MyNetWorkFrame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/greendaogenerate/greendaogenerate.iml" filepath="$PROJECT_DIR$/greendaogenerate/greendaogenerate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myhttp/myhttp.iml" filepath="$PROJECT_DIR$/myhttp/myhttp.iml" />
+    </modules>
+  </component>
+</project>

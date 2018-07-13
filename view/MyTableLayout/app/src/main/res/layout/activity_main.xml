@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shixing.mytablelayout.MainActivity">
+
+    <!-- 选项按钮放在头部-->
+    <!--
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabTextColor="#ff00ff"
+            app:tabSelectedTextColor="#00ff00"
+            app:tabMode="scrollable"
+            app:tabGravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+   -->
+
+  <!-- 选项按钮放在底部-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabTextColor="#ff00ff"
+        app:tabSelectedTextColor="#00ff00"
+        app:tabMode="fixed"
+        app:tabGravity="center"
+        android:layout_width="match_parent"
+        app:tabIndicatorHeight="0dp"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

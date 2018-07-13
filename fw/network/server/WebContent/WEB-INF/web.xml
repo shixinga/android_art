@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>VodWeb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>com.mooc.UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TestMyOkhttpRequestServlet</servlet-name>
+    <servlet-class>com.mooc.TestMyOkhttpRequestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestMyOkhttpRequestServlet</servlet-name>
+    <url-pattern>/testMyOkhttpRequestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>com.mooc.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/helloServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

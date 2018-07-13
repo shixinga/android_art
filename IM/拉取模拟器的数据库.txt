@@ -1,0 +1,8 @@
+ adb shell
+ su
+ chmod -R 777 /data
+ cd /data/data/csx.haha.com.italker/databases
+ cat AppDatabase.db > /sdcard/AppDatabase.db
+ exit
+ exit
+  adb pull /sdcard/AppDatabase.db  C:\Users\shixing\Desktop

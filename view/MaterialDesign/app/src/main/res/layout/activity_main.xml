@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shixing.materialdesign_animation.MainActivity">
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="水波纹"
+        android:onClick="click"/>
+    <Button
+        android:id="@+id/bt2"
+        android:layout_below="@id/bt1"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="水波纹2"
+        android:onClick="click2"/>
+    <Button
+        android:layout_below="@id/bt2"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="转场动画,跳到secondActivity"
+        android:onClick="click3"/>
+
+</RelativeLayout>
