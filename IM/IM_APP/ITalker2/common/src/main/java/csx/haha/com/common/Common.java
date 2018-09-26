@@ -17,7 +17,8 @@ public class Common {
         String REGEX_MOBILE = "[1][3,4,5,7,8][0-9]{9}$";
 
         // 基础的网络请求地址
-        String API_URL = "http://ip address/iTalker/api/";
+        String API_URL = "http://47.106.38.102:8080/iTalker/api/";
+//        String API_URL = "http://ip address/iTalker/api/";
 
         // 最大的上传图片大小860kb
         long MAX_UPLOAD_IMAGE_LENGTH = 860 * 1024;

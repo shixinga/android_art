@@ -9,9 +9,11 @@
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <!--链接地址用户名密码 -->
         <property name="connection.url">jdbc:mysql://127.0.0.1:3306/im?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false</property>
+
         <property name="connection.username">root</property>
-        <!--<property name="connection.password"></property>--> <!-- 本地db默认没有密码-->
-        <property name="connection.password"></property>
+        <property name="connection.password"></property>  本地db默认没有密码
+        <!--<property name="connection.url">jdbc:mysql://47.106.38.102:3306/im?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false</property>-->
+        <!--<property name="connection.password">123456</property>-->
 
         <!--<property name="connection.url">jdbc:mysql://qiujuer.net:6968/DB_I_T_PUSH?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false</property>-->
 

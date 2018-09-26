@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:onClick="click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击查看MainActivity的界面"/>
+
+    <Button
+        android:onClick="click1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送事件1"/>
+    <Button
+        android:onClick="click2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送事件2"/>
+    <Button
+        android:onClick="click3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送事件3"/>
+    <Button
+        android:onClick="clickregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注册event"/>
+    <Button
+        android:onClick="clickunregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解注册event"/>
+
+
+</LinearLayout>
